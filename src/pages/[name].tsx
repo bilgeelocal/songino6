@@ -79,7 +79,7 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
   const [dataSource, setDataSource] = useState([]);
   const router = useRouter();
   const { name } = router.query;
-  const [selectedDate, setSelectedDate] = useState<string>("2024-06-12");
+  const [selectedDate, setSelectedDate] = useState<string>("2024-06-14");
 
   useEffect(() => {
     async function fetchData() {

@@ -92,10 +92,11 @@ interface Props {
 }
 const LandingPage: NextPage<Props> = ({ data }): React.ReactElement => {
   const [dataSource, setDataSource] = useState([]);
+  const [selectedDate, setSelectedDate] = useState<string>("2024-06-14");
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get(`/api/maindata`);
+      const response = await axios.get(`/api/maindata?date=${selectedDate}`);
       const data = response.data.data;
       console.log(data);
       const transformedData = data.map((item: any) => ({
@@ -113,7 +114,7 @@ const LandingPage: NextPage<Props> = ({ data }): React.ReactElement => {
       setDataSource(transformedData);
     }
     fetchData();
-  }, []);
+  }, [name, selectedDate]);
 
   const { totalLikes, totalComments, likePercentage } = useMemo(() => {
     console.log("Data source in useMemo:", dataSource); // Log dataSource used in useMemo
@@ -183,6 +184,7 @@ const LandingPage: NextPage<Props> = ({ data }): React.ReactElement => {
   }
 
   function onChangeDate(date: any) {
+    setSelectedDate(dayjs(date).format("YYYY-MM-DD"));
     console.log("Selected date:", dayjs(date).format("YYYY-MM-DD"));
   }
 
