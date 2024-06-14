@@ -46,6 +46,7 @@ const columns: any = [
     defaultSortOrder: "descend",
     sorter: (a: any, b: any) => a.comment - b.comment,
   },
+  
   {
     title: "Grey Like",
     dataIndex: "grey_like",
@@ -61,6 +62,12 @@ const columns: any = [
   {
     title: "Grey Comment",
     dataIndex: "grey_comment",
+    defaultSortOrder: "descend",
+    sorter: (a: any, b: any) => a.comment - b.comment,
+  },
+  {
+    title: "Rating (%)",
+    dataIndex: "pavg",
     defaultSortOrder: "descend",
     sorter: (a: any, b: any) => a.comment - b.comment,
   },
@@ -90,6 +97,7 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
         grey_like: item.grey_like,
         grey_share: item.grey_share,
         grey_comment: item.grey_comment,
+        pavg: item.pavg,
       }));
       setDataSource(transformedData);
     }
