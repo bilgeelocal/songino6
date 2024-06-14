@@ -114,7 +114,7 @@ const LandingPage: NextPage<Props> = ({ data }): React.ReactElement => {
       setDataSource(transformedData);
     }
     fetchData();
-  }, [name, selectedDate]);
+  }, [selectedDate]);
 
   const { totalLikes, totalComments, likePercentage } = useMemo(() => {
     console.log("Data source in useMemo:", dataSource); // Log dataSource used in useMemo
