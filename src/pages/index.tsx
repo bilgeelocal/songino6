@@ -65,7 +65,7 @@ const columns: any = [
     title: "Grey Like",
     dataIndex: "grey_like",
     defaultSortOrder: "descend",
-    sorter: (a: any, b: any) => a.like - b.like,
+    sorter: (a: any, b: any) => a.grey_like - b.grey_like,
   },
   // {
   //   title: "Grey Share",
@@ -77,13 +77,13 @@ const columns: any = [
     title: "Grey Comment",
     dataIndex: "grey_comment",
     defaultSortOrder: "descend",
-    sorter: (a: any, b: any) => a.comment - b.comment,
+    sorter: (a: any, b: any) => a.grey_comment - b.grey_comment,
   },
   {
     title: "Rating (%)",
     dataIndex: "pavg",
     defaultSortOrder: "descend",
-    sorter: (a: any, b: any) => a.comment - b.comment,
+    sorter: (a: any, b: any) => a.pavg - b.pavg,
   },
 ];
 
