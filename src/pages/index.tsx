@@ -92,7 +92,7 @@ interface Props {
 }
 const LandingPage: NextPage<Props> = ({ data }): React.ReactElement => {
   const [dataSource, setDataSource] = useState([]);
-  const [selectedDate, setSelectedDate] = useState<string>("2024-06-14");
+  const [selectedDate, setSelectedDate] = useState<string>("2024-06-13");
 
   useEffect(() => {
     async function fetchData() {
