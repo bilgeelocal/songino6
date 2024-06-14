@@ -247,7 +247,7 @@ const { totalShares, grey_shares } = useMemo(() => {
                 height={320}
               />
             </div>
-            <div className="chart-container">
+            {/* <div className="chart-container">
               <div className="status-label" style={{ textAlign: 'center', color: '#2ecc71',fontWeight: 'bold' }}>Shares Status</div>
               <Chart
                 options={chartOptions}
@@ -256,7 +256,7 @@ const { totalShares, grey_shares } = useMemo(() => {
                 width={250}
                 height={320}
               />
-            </div>
+            </div> */}
           </div>
         </div>
       
